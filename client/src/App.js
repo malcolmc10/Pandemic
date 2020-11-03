@@ -44,7 +44,7 @@ function App() {
 
   return (
     <div className="app">
-      <div classname="app__left">
+      <div className="app__left">
         <div className="app__header">
           <h1>COVID Country </h1>
           <FormControl className="app__dropdown">
@@ -90,7 +90,7 @@ function App() {
       <Card className="app__right">
         <CardContent>
           <h3>Live Cases by Country</h3>
-          {/* table and graph */}
+          
           <h3>Worldwide New Cases</h3>
 
         </CardContent>

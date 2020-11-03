@@ -1,4 +1,4 @@
-*{
+* {
   margin: 0,
 }
 
@@ -9,6 +9,9 @@ body {
 .app {
 
   display: flex;
+  justify-content: space-evenly;
+  padding: 20px;
+  
 }
 
 .app__header {
@@ -17,10 +20,12 @@ body {
   align-items: center;
   margin-bottom: 20px;
   justify-content: space-between;
+
 }
 
 .app__stats {
 
   display: flex;
   justify-content: space-between;
+  
 }
