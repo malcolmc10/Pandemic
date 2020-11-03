@@ -5,12 +5,13 @@ import {
   Select,
   Card,
   CardContent,
-  
+
 } from "@material-ui/core";
 import './App.css';
 import Map from './Map'
 import InfoBox from './InfoBox'
 import Table from './Table'
+import {sortData} from "./util"
 
 
 function App() {
@@ -21,10 +22,10 @@ function App() {
 
   useEffect(() => {
     fetch("https://disease.sh/v3/covid-19/all")
-    .then(response => response.json())
-    .then(data => {
-      setCountryInfo(data);
-    })
+      .then(response => response.json())
+      .then(data => {
+        setCountryInfo(data);
+      })
 
   }, [])
 
@@ -40,7 +41,9 @@ function App() {
               value: country.countryInfo.iso2
             }));
 
-          setTableData(data);
+            const sortedData = sortData(data);
+
+          setTableData(sortedData);
 
           setCountries(countries);
         });
@@ -51,15 +54,15 @@ function App() {
 
   const onCountryChange = async (event) => {
     const countryCode = event.target.value;
-        setCountry(countryCode);
+    setCountry(countryCode);
     const url = countryCode === 'worldwide' ? "https://disease.sh/v3/covid-19/all" : `https://disease.sh/v3/covid-19/countries/${countryCode}`;
-     await fetch (url)
-     .then(response => response.json())
-     .then (data => {
-      setCountry(countryCode);
-      setCountryInfo(data);
+    await fetch(url)
+      .then(response => response.json())
+      .then(data => {
+        setCountry(countryCode);
+        setCountryInfo(data);
 
-     })
+      })
   };
 
   console.log('countryinfo', countryInfo);
@@ -114,7 +117,7 @@ function App() {
           <h3>Live Cases by Country</h3>
 
           <Table countries={tableData} />
-          
+
           <h3>Worldwide New Cases</h3>
 
         </CardContent>
