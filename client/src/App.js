@@ -12,6 +12,7 @@ import Map from './Map'
 import InfoBox from './InfoBox'
 import Table from './Table'
 import {sortData} from "./util"
+import LineGraph from "./LineGraph"
 
 
 function App() {
@@ -119,7 +120,8 @@ function App() {
           <Table countries={tableData} />
 
           <h3>Worldwide New Cases</h3>
-
+          <LineGraph />
+              {/* graph */}
         </CardContent>
 
 
