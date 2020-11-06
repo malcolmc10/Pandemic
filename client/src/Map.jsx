@@ -3,7 +3,7 @@ import './Map.css';
 import { MapContainer as LeafletMap, TileLayer } from "react-leaflet";
 
 
-function Map({ center, zoom }) {
+function Map({ countries, center, zoom }) {
     return (
         <div className="map">
             <LeafletMap center={center} zoom={zoom}>
@@ -12,6 +12,8 @@ function Map({ center, zoom }) {
             attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
             
             />
+
+            {/*  Loop through countries and draw cirles on the screen */}
 
             </LeafletMap>
 
