@@ -104,7 +104,7 @@ function LineGraph() {
                 
                 data={{
                     datasets: [{
-                        backgroundColor: "white",
+                        backgroundColor: "rgba(204, 16, 52, 0.5",
                         borderColor: "#CC1034",
                         data: data,
     
