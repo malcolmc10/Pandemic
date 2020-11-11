@@ -14,8 +14,8 @@ function Map({ countries, casesType, center, zoom }) {
             
             />
 
-            {/*  Loop through countries and draw cirles on the screen */}
-            {showDataOnMap(countries, casesType,)}
+            
+            {showDataOnMap(countries, casesType)}
             </LeafletMap>
 
         </div>

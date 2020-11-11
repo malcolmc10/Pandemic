@@ -87,7 +87,7 @@ function LineGraph({casesType = "cases"}) {
                 let chartData = buildChartData(data, "cases");
                               
                 setData(chartData);
-                console.log(chartData);
+                // console.log(chartData);
             });  
         }
         fetchData();
@@ -111,7 +111,7 @@ function LineGraph({casesType = "cases"}) {
                     }]
                 }
     
-                } />
+                } options={options} />
 
             ) }
             
