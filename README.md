@@ -19,10 +19,12 @@ https://covid-country-e9bff.web.app/
 
 # Libraries and Dependencies
 ```
-Material UI
-React 
-Chart.js
-Leaflet
+// @material-us/core
+// react-leaflet  (The Map)
+// leaflet        (Also the Map)
+// react-chartjs-2 chart.js   (graph chart chartjs)
+// numeral  (for formating numbers.. (currency, percentages, decimal places)
+
  
 ```
 
