@@ -21,17 +21,21 @@
 }
 
 .info-flag img {
-    width: 100px;
+    width: 100%;
     border-radius: 5px;
+    
+    
+    
     
 }
 
 .info-flag {
     height: 80px;
     width: 150px;
+    
     background-size: cover;
     border-radius: 8px;
-    border-color: black;
+    
 
 
 }

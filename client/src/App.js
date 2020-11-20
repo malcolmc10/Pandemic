@@ -24,7 +24,7 @@ const App = () => {
   const [mapCenter, setMapCenter] = useState({lat: 34.80746, lng: -40.4796});
   const [mapZoom, setMapZoom] = useState(3);
   const [mapCountries, setMapCountries] = useState([]);
-  const [casesType, setCasesType] = useState("cases");
+  const [casesType, setCasesType] = useState('cases');
 
   useEffect(() => {
     fetch("https://disease.sh/v3/covid-19/all")
@@ -108,16 +108,16 @@ const App = () => {
 
         <div className="app__stats">
 
-          <InfoBox onClick ={(e) => setCasesType("cases")} 
-          title="Coronavirus Cases" active={casesType === "cases"}  cases={prettyPrintStat(countryInfo.todayCases)} 
+          <InfoBox onClick ={(e) => setCasesType('cases')} 
+          title="Coronavirus Cases" active={casesType === 'cases'}  cases={prettyPrintStat(countryInfo.todayCases)} 
           total={prettyPrintStat(countryInfo.cases)} />
 
-          <InfoBox onClick ={(e) => setCasesType("recovered")}
-          title="Recovered" active={casesType === "recovered"} cases={prettyPrintStat(countryInfo.todayRecovered)} 
+          <InfoBox onClick ={(e) => setCasesType('recovered')}
+          title="Recovered" active={casesType === 'recovered'} cases={prettyPrintStat(countryInfo.todayRecovered)} 
           total={prettyPrintStat(countryInfo.recovered)} />
 
-          <InfoBox onClick ={(e) => setCasesType("deaths")}
-          title="Deaths" active={casesType === "deaths"} cases={prettyPrintStat(countryInfo.todayDeaths)} 
+          <InfoBox onClick ={(e) => setCasesType('deaths')}
+          title="Deaths" active={casesType === 'deaths'} cases={prettyPrintStat(countryInfo.todayDeaths)} 
           total={prettyPrintStat(countryInfo.deaths)} />
 
         </div>

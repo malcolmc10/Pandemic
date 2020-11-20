@@ -11,7 +11,7 @@ function InfoBox({title, cases, total, ...props }) {
 
         <CardContent>
 
-        <Typography className="infoBox__title" color="textSecondary"> 
+        <Typography className="infoBox__title" color="textSecondary" > 
 
         {title}
 

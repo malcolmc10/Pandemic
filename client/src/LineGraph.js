@@ -50,7 +50,7 @@ const options = {
     },
 };
 
-const buildChartData = (data, casesType = "cases") => {
+const buildChartData = (data, casesType = 'cases') => {
     const chartData = [];
     let lastDataPoint;
 
@@ -71,7 +71,7 @@ const buildChartData = (data, casesType = "cases") => {
 };
 
 
-function LineGraph({casesType = "cases"}) {
+function LineGraph({casesType = 'cases'}) {
     const [data, setData] = useState({})
 
 
@@ -84,10 +84,10 @@ function LineGraph({casesType = "cases"}) {
             })
             .then((data) => {
                 
-                let chartData = buildChartData(data, "cases");
+                let chartData = buildChartData(data, casesType);
                               
                 setData(chartData);
-                // console.log(chartData);
+                
             });  
         }
         fetchData();
@@ -96,7 +96,7 @@ function LineGraph({casesType = "cases"}) {
 
     return (
         <div>
-            {/* <h1>I am a graph</h1> */}
+            
             {data?.length > 0 && (
                 <Line 
             
@@ -104,7 +104,7 @@ function LineGraph({casesType = "cases"}) {
                 
                 data={{
                     datasets: [{
-                        backgroundColor: "rgba(204, 16, 52, 0.5",
+                        backgroundColor: "rgba(204, 16, 52, 0.5)",
                         borderColor: "#CC1034",
                         data: data,
     

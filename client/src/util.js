@@ -37,7 +37,7 @@ export const prettyPrintStat = (stat) =>
     stat ? `+${numeral(stat).format("0.0a")}` : "+0";
 
 // Function to draw circles on the map with interactive tooltips.
-export const showDataOnMap = (data, casesType = "cases") => (
+export const showDataOnMap = (data, casesType="cases") => (
     data.map((country) => (
         <Circle
             center={[country.countryInfo.lat, country.countryInfo.long]}
